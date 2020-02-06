@@ -45,6 +45,16 @@ public:
 
     return *this;
   }
+
+  virtual Bag& operator+(Item i) { add(i); return *this; }
+  virtual Bag<Item>& operator--() { sz--; return *this; }
+  virtual Bag<Item>& operator-(int n) { sz -= n; return *this; }
+  friend std::ostream& operator<<(std::ostream& out, Bag<Item>& b) {
+    for (int i = 0; i < b.sz; i++) {
+      out << b.elements[i] << ' ';
+    }
+    return out;
+  }
   virtual Item operator[](int ndx) const { return elements[ndx]; }
   virtual Item& operator[](int ndx) { return elements[ndx]; }
   virtual Bag<Item>& operator<<(Item e) {

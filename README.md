@@ -1,2 +1,3 @@
-# Assignment 3
-Created a template dynamic array (bag) that grows when items are added.
+# WSU CS2420 Spring 2020
+Demonstrates template container class inheritance. The bags grow in size
+as needed.
